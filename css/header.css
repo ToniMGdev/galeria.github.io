@@ -1,0 +1,58 @@
+header{
+    display: flex;
+    flex-flow: row wrap; /*alinear en fila */
+    justify-content: space-between; /*espacio entre los elementos*/
+    align-items: center;
+}
+
+header h1{
+    flex-grow: 1; /*crecimiento*/
+    margin: 30px;
+    text-align: center;
+}
+
+header ul{
+    flex-grow: 1; /*crecimiento*/
+    padding: 0;
+    margin: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    display: block; /*convertir en bloque para darle estilos*/
+    margin: 10px;
+    color: black;
+    transition: all 0.1s;
+}
+
+header ul li a:hover{
+    color: var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+}
+
+header ul li a.active{
+    color: var(--color-primary-dark);
+    border-left: 3px solid var(--color-primary);
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+    header h1{
+        text-align: left;/*alinear el titulo a la izquierda al hacer grande*/
+    }
+    header ul{
+        justify-content: flex-end; /*alinear el menu a la derecha al hacer grande*/
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+
+}

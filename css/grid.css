@@ -1,0 +1,63 @@
+#container{
+    display: grid;
+    grid-template-areas:    'header header'
+                            'sidebar photos';
+
+/* hay que poner el "display: grid" y el "grid template areas" 
+con los id indicados a los div del html
+(i los id indicados en css, con en grid-area) */
+}
+
+header{ /* aqui asignas a los id del html 
+    el nombre indicado en el grid-template-area */
+    grid-area: header;
+    
+}
+
+#sidebar{/* aqui asignas a los id del html 
+    el nombre indicado en el grid-template-area */
+    grid-area: sidebar;
+
+}
+
+#photo-container{/* aqui asignas a los id del html 
+    el nombre indicado en el grid-template-area */
+    grid-area: photos;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #container{
+        grid-template-areas:    'header'
+                                'sidebar'
+                                'photos';
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    #container{
+        grid-template-areas:    'header'
+                                'sidebar'
+                                'photos';
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #container{
+        display: grid;
+        grid-template-areas:    'header header'
+                                'sidebar photos';
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+}

@@ -1,0 +1,88 @@
+#sidebar ul {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    /*centrar texto*/
+    padding: 0 60px;
+    /*padding por los 2 lados*/
+    
+
+}
+
+#sidebar ul li {
+    margin: 5px;
+    font-size: 25px;
+    
+}
+
+#sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: all 0.2s;
+    border-left: 5px solid white; /*para que al hacer hover no se desplace*/
+}
+
+
+/*#sidebar ul li a.active{
+    color: var(--color-primary)
+}*/
+
+
+@media (max-width: 600px) {
+    #sidebar ul li a.active {
+        font-weight: bold;
+    }
+
+    #sidebar ul li a:hover {
+        background-color: var(--color-primary-soft);
+        border-radius: 5px;
+        color: black;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    #sidebar ul {
+        /*que se puedan poner en filas*/
+        display: flex;
+        /*flexible*/
+        flex-flow: row wrap;
+        /*cambia a filas*/
+        justify-content: space-evenly;
+        /*centrar contenido horizontal*/
+
+    }
+
+    #sidebar ul li a.active {
+        border-bottom: 5px solid var(--color-primary);
+        background-color: none;
+    }
+
+    #sidebar ul li a:hover {
+        background-color: var(--color-primary-soft);
+        border-radius: 5px;
+        color: black;
+    }
+}
+
+@media (min-width: 768px) {
+    #sidebar ul {
+        display: flex;
+        /*flexible*/
+        flex-flow: column wrap;
+        /*alinear en columna */
+        align-items: flex-start;
+        /*alineacion al inicio*/
+    }
+
+    #sidebar ul li a.active {
+        border-bottom: 5px solid var(--color-primary);
+    }
+
+    #sidebar ul li a:hover {
+        border-left: 5px solid var(--color-primary);
+    }
+
+   
+}

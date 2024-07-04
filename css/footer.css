@@ -1,0 +1,10 @@
+footer{
+    position: fixed; /*para que no se mueva*/
+    bottom: 0; /*colocado abajo*/
+    left: 0; /*colocado a la izquierda*/
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    padding: 5px 0;
+    text-align: center;
+}
